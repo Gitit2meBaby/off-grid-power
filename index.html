@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Hind+Guntur:wght@300;400;500;600&family=Open+Sans:wght@500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobileNav.css">
     <script defer src="screensize.js"></script>
     <script defer src="script.js"></script>
     <script defer src="testimonial.js"></script>
@@ -82,52 +83,6 @@
             </div>
         </div>
         </div>
-        <div class="toggle">
-            <svg stroke="currentColor" fill="#fff" stroke-width="0" viewBox="0 0 512 512" height="3em" width="3em"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
-            </svg>
-        </div>
-        <dialog class="mobile-nav hidden">
-            <svg id="closeBtn" stroke="currentColor" fill="#1F1F1F" stroke-width="0" viewBox="0 0 1024 1024"
-                height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M354 671h58.9c4.7 0 9.2-2.1 12.3-5.7L512 561.8l86.8 103.5c3 3.6 7.5 5.7 12.3 5.7H670c6.8 0 10.5-7.9 6.1-13.1L553.8 512l122.4-145.9c4.4-5.2.7-13.1-6.1-13.1h-58.9c-4.7 0-9.2 2.1-12.3 5.7L512 462.2l-86.8-103.5c-3-3.6-7.5-5.7-12.3-5.7H354c-6.8 0-10.5 7.9-6.1 13.1L470.2 512 347.9 657.9A7.95 7.95 0 0 0 354 671z">
-                </path>
-                <path
-                    d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z">
-                </path>
-            </svg>
-            <div class="mob-dropdown">
-                <p>Products</p>
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
-                    width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </div>
-            <div class="mob-dropdown-content hidden">
-                <ul>
-                    <a href="#">
-                        <li>SMA Solar Inverters</li>
-                    </a>
-                    <a href="#">
-                        <li>BYD Lithium Batteries</li>
-                    </a>
-                    <a href="#">
-                        <li>Winaico Solar Panels</li>
-                    </a>
-                    <a href="#">
-                        <li>Radiant Solar Racking</li>
-                    </a>
-                </ul>
-            </div>
-            <a href="#">Download</a>
-            <a href="#">Reviews</a>
-            <a href="#">Blog</a>
-            <button>Free Quote</button>
-        </dialog>
     </header>
 
     <section class="hero">
@@ -137,9 +92,9 @@
                 <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
             </svg>
         </div>
-        <dialog class="mobile-nav hidden">
-            <svg id="closeBtn" stroke="currentColor" fill="#1F1F1F" stroke-width="0" viewBox="0 0 1024 1024"
-                height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+        <div class="mobile-nav">
+            <svg id="closeBtn" stroke="#fff" fill="#fff" stroke-width="0" viewBox="0 0 1024 1024" height="3em"
+                width="3em" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M354 671h58.9c4.7 0 9.2-2.1 12.3-5.7L512 561.8l86.8 103.5c3 3.6 7.5 5.7 12.3 5.7H670c6.8 0 10.5-7.9 6.1-13.1L553.8 512l122.4-145.9c4.4-5.2.7-13.1-6.1-13.1h-58.9c-4.7 0-9.2 2.1-12.3 5.7L512 462.2l-86.8-103.5c-3-3.6-7.5-5.7-12.3-5.7H354c-6.8 0-10.5 7.9-6.1 13.1L470.2 512 347.9 657.9A7.95 7.95 0 0 0 354 671z">
                 </path>
@@ -147,28 +102,29 @@
                     d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z">
                 </path>
             </svg>
+            <a href="index.html">Home</a>
             <div class="mob-dropdown">
                 <p>Products</p>
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                <svg id="mobProductArrow" stroke="#fff" fill="#1F1F1F" stroke-width="2" viewBox="0 0 16 16" height="1em"
                     width="1em" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                         d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z"
                         clip-rule="evenodd"></path>
                 </svg>
             </div>
-            <div class="mob-dropdown-content hidden">
+            <div class="mob-dropdown-content">
                 <ul>
                     <a href="#">
-                        <li>SMA Solar Inverters</li>
+                        <li>Inverters</li>
                     </a>
                     <a href="#">
-                        <li>BYD Lithium Batteries</li>
+                        <li>Batteries</li>
                     </a>
                     <a href="#">
-                        <li>Winaico Solar Panels</li>
+                        <li>Solar Panels</li>
                     </a>
                     <a href="#">
-                        <li>Radiant Solar Racking</li>
+                        <li>Solar Racking</li>
                     </a>
                 </ul>
             </div>
@@ -176,7 +132,7 @@
             <a href="#">Reviews</a>
             <a href="#">Blog</a>
             <button>Free Quote</button>
-        </dialog>
+        </div>
         <div class="hero-title">
             <h1>Leading provider of off-grid solar systems</h1>
         </div>
@@ -241,13 +197,15 @@
 
         <div class="product">
             <div class="img-container">
-                <img src="assets/SMA.webp" alt="SMA Sunny Island inverter">
+                <img src="assets/SMA.webp" alt="SMA Sunny Island inverter" id="smaDesk">
+                <img src="assets/SMA350.webp" alt="SMA Sunny Island inverter" id="smaMob">
             </div>
             <div class="product-content">
-                <h4>SMA SOLAR INVERTERS</h4>
+                <h4 class="slide-left">SMA SOLAR INVERTERS</h4>
                 <div class="divider small"></div>
                 <div class="product-info">
-                    <p>SMA inverters are devices used in photovoltaic (PV) solar energy systems to convert direct
+                    <p class="slide-up">SMA inverters are devices used in photovoltaic (PV) solar energy systems to
+                        convert direct
                         current
                         (DC) electricity generated by solar panels into alternating current (AC) electricity that can be
                         used to power homes and businesses. SMA is a leading manufacturer of solar inverters, offering a
@@ -274,11 +232,15 @@
         </div>
 
         <div class="product">
+            <div class="img-container">
+                <img id="bydMob" src="assets/BYD364.webp" alt="SMA Sunny Island inverter">
+            </div>
             <div class="product-content">
-                <h4>BYD LITHIUM BATTERIES</h4>
+                <h4 class="slide-right">BYD LITHIUM BATTERIES</h4>
                 <div class="divider small"></div>
                 <div class="product-info">
-                    <p>BYD LVS (Lithium-ion Vehicle System) battery is a high-performance battery system developed by
+                    <p class="slide-up">BYD LVS (Lithium-ion Vehicle System) battery is a high-performance battery
+                        system developed by
                         BYD, a Chinese multinational automobile manufacturer and energy company. It is designed for use
                         in energy storage systems (ESS).
 
@@ -298,22 +260,25 @@
                 </div>
             </div>
             <div class="img-container">
-                <img src="assets/BYD.webp" alt="SMA Sunny Island inverter">
+                <img id="bydDesk" src="assets/BYD.webp" alt="SMA Sunny Island inverter">
             </div>
         </div>
 
         <div class="product">
             <div class="img-container">
-                <img src="assets/winaico.webp" alt="SMA Sunny Island inverter">
+                <img id="winaicoDesk" src="assets/winaico.webp" alt="SMA Sunny Island inverter">
+                <img id="winaicoMob" src="assets/winaico282.webp" alt="SMA Sunny Island inverter">
             </div>
             <div class="product-content">
-                <h4>WINAICO SOLAR PANELS</h4>
+                <h4 class="slide-left">WINAICO SOLAR PANELS</h4>
                 <div class="divider small"></div>
                 <div class="product-info">
-                    <p>WINAICO is a Taiwanese solar panel manufacturer that is known for producing high-quality,
+                    <p class="slide-up">WINAICO is a Taiwanese solar panel manufacturer that is known for producing
+                        high-quality,
                         high-performance photovoltaic panels. The company uses high-quality materials and cutting-edge
                         manufacturing processes to produce panels that deliver excellent efficiency and durability.</p>
-                    <p>Overall, WINAICO solar panels are known for their high efficiency, durability, and high-quality
+                    <p class="slide-up">Overall, WINAICO solar panels are known for their high efficiency, durability,
+                        and high-quality
                         components. If you are considering solar panels for your home or business, WINAICO is definitely
                         worth considering</p>
                     <button class="text-btn">LEARN MORE
@@ -385,10 +350,16 @@
     </section>
 
     <section class="banner">
-        <img src="assets/award.webp" alt="Clean energy council award">
-        <img src="assets/winaico-logo.webp" alt="winaicologo">
-        <img src="assets/SMA-logo.webp" alt="SMA logo">
-        <img src="assets/BYD-logo.webp" alt="BYD logo">
+        <img id="award" src="assets/award.webp" alt="Clean energy council award">
+        <a href="https://www.winaico.com.au/">
+            <img src="assets/winaico-logo.webp" alt="winaicologo">
+        </a>
+        <a href="https://www.sma-australia.com.au/">
+            <img src="assets/SMA-logo.webp" alt="SMA logo">
+        </a>
+        <a href="https://bydbatterybox.com/">
+            <img src="assets/BYD-logo.webp" alt="BYD logo">
+        </a>
         <img src="assets/SMA-powerup-logo.webp" alt="SMA Power Up logo">
     </section>
 

@@ -1,0 +1,23 @@
+/* checkbox element: for mobile navigation button */
+.toggle input {
+    display: none;
+    margin: 0 0;
+    padding: 0 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* for visual purpose */
+.toggle label {
+    display: none;
+    font-size: 200%;
+    width: 30px;
+    height: 30px;
+    /* center vertically and horizontally */
+    line-height: 30px;
+    text-align: center;
+}

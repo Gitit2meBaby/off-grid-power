@@ -23,6 +23,11 @@ body {
 }
 
 /* Header */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* top split */
 .split-header {
@@ -94,6 +99,14 @@ header {
     font-weight: 500;
     cursor: pointer;
     margin: 0;
+}
+
+.dropdown {
+    margin-right: -1rem;
+}
+
+.dropdown svg {
+    margin-bottom: 0.3rem;
 }
 
 .dropdown p {
@@ -857,7 +870,7 @@ header {
 .footer-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 1vh 4vw 1vh 8vw;
+    padding: 3vh 4vw 3vh 8vw;
 }
 
 .footer-nav {
@@ -932,31 +945,9 @@ header {
         opacity: .5;
         position: absolute;
         right: 5vw;
-        bottom: 2vh;
-        transform: rotate(45deg);
-        animation: rotate 4s ease-in infinite;
-    }
-
-    @keyframes rotate {
-        0% {
-            transform: rotate(45deg);
-        }
-
-        25% {
-            transform: rotate(30deg);
-        }
-
-        50% {
-            transform: rotate(45deg);
-        }
-
-        75% {
-            transform: rotate(60deg);
-        }
-
-        100% {
-            transform: rotate(45deg);
-        }
+        bottom: 1vh;
+        transform: rotate(15deg);
+        animation: none;
     }
 
     .footer-cta svg:nth-child(1) {

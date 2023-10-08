@@ -6,10 +6,10 @@ const testimonials = [
         date: "Mar 8, 2023",
     },
     // {
-    //     title: "Could Not Be Happier",
-    //     content: "From the first consultation through to the installation and ongoing support that Trent and the team provided, I have been overwhelmed with the quality of the customer service and the products that they installed. The system suits my needs perfectly and was tailored to my budget, location and energy requirements flawlessly. Trent is passionate about off-grid power, his depth of knowledge and attention to detail is clear from the outset. Thank you for giving everyone the opportunity to be self-reliant no matter what the circumstance.",
-    //     name: "Daniel Thomas",
-    //     date: "May 22, 2023",
+    // title: "Could Not Be Happier",
+    // content: "From the first consultation through to the installation and ongoing support that Trent and the team provided, I have been overwhelmed with the quality of the customer service and the products that they installed. The system suits my needs perfectly and was tailored to my budget, location and energy requirements flawlessly. Trent is passionate about off-grid power, his depth of knowledge and attention to detail is clear from the outset. Thank you for giving everyone the opportunity to be self-reliant no matter what the circumstance.",
+    // name: "Daniel Thomas",
+    // date: "May 22, 2023",
     // },
     {
         title: "Exceptional Installation",
@@ -62,6 +62,8 @@ const testimonials = [
 
 ];
 
+
+// LANDING PAGE TESTIMONIAL SECTION
 const testimonial = document.querySelector('.testimonial')
 let testimonialTitle = document.querySelector('#testimonialTitle')
 let testimonialContent = document.querySelector('#testimonialContent')
@@ -90,3 +92,4 @@ function updateTestimonial(index) {
 setInterval(() => {
     updateTestimonial(currentIndex);
 }, 5000);
+

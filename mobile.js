@@ -93,10 +93,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const logo = document.getElementById('logo');
 
     function adjustImageSize() {
-        if (window.innerWidth <= 450) {
-            logo.src = "assets/logo50.webp"
+        if (window.innerWidth <= 700) {
+            logo.src = "assets/logo-white50.webp"
         } else {
-            logo.src = "assets/logo100.webp"
+            logo.src = "assets/logo-white.webp"
         }
     }
 

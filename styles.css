@@ -33,7 +33,7 @@ body {
 .split-header {
     display: flex;
     flex-direction: column;
-    width: 85vw;
+    width: 65vw;
 }
 
 .contact,
@@ -47,7 +47,7 @@ body {
 .contact {
     padding-left: 4vw;
     gap: 2vw;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid rgba(247, 247, 247, 0.522);
     margin-bottom: 0.8rem;
 }
 
@@ -64,6 +64,7 @@ body {
 .email p {
     margin: 0;
     font-size: .8rem;
+    color: var(--whiteText);
 }
 
 .email p:hover {
@@ -77,14 +78,17 @@ body {
     align-items: flex-end;
     justify-content: center;
     gap: 4vw;
-
+    margin-top: 0.5rem;
 }
 
 header {
-    padding: 0rem 6vw;
+    padding: 0rem 4vw .5rem 4vw;
+    gap: 1vw;
     margin: 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
 }
 
 .button-container button {
@@ -93,10 +97,11 @@ header {
 
 .dropdown p,
 .desktop-nav a {
-    font-size: 1.4rem;
+    font-family: 'Amiko', sans-serif;
+    font-size: 1.2rem;
     text-decoration: none;
-    color: var(--blue);
-    font-weight: 500;
+    color: var(--whiteText);
+    font-weight: 600;
     cursor: pointer;
     margin: 0;
 }
@@ -163,6 +168,12 @@ header {
 .dropdown-content a:hover {
     color: var(--green);
     font-weight: 700;
+}
+
+.invert-btn {
+    background-color: transparent;
+    color: var(--whiteText);
+    border: 2px solid var(--whiteText);
 }
 
 @media screen and (min-width: 450px) {
@@ -458,6 +469,7 @@ header {
 .counter p {
     margin: 0;
     font-size: 1.5rem;
+    color: var(--whiteText);
 }
 
 @media screen and (max-width: 450px) {
@@ -566,6 +578,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    max-width: 90vw;
 }
 
 @media screen and (max-width: 450px) {
@@ -722,6 +735,7 @@ header {
 .testimonial-title h4 {
     font-family: 'Amiko', sans-serif;
     font-size: 1.5rem;
+    text-align: center;
     color: var(--greyish);
     margin: 0;
 }
@@ -763,7 +777,7 @@ header {
     }
 
     .testimonial {
-        height: 57vh;
+        height: 62vh;
     }
 
     .testimonials h2 {

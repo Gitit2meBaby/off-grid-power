@@ -40,7 +40,7 @@ body {
 
 .text-content h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3vw);
     color: var(--blackish);
 }
 
@@ -67,9 +67,11 @@ body {
     align-self: center;
     width: 120px;
     color: var(--blue);
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 2vh;
+    min-width: 160px;
     transition: background-color .7s ease, color 1s ease;
 }
 
@@ -82,7 +84,42 @@ body {
 
 #bydTitle {
     margin: 0;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
+}
+
+.bydListItem {
+    transform: translateX(40px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 0.5s ease-out;
+    animation: slideIn 2s ease forwards;
+}
+
+.bydListItem:nth-child(1) {
+    animation-delay: 1.4s;
+}
+
+.bydListItem:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.bydListItem:nth-child(3) {
+    animation-delay: 2.6s;
+}
+
+.bydListItem:nth-child(4) {
+    animation-delay: 2.2s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .safety {
@@ -156,15 +193,21 @@ ul li::before {
     transition: opacity 3s ease, height 2s ease-in;
 }
 
-.bold-text {
-    font-weight: 500;
-    margin-left: 5vw;
-    padding-top: 5vh;
-}
-
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 1000px) {
     .mob-img {
         display: none;
+    }
+
+    .text-content {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 700px) {
+
+    .text-content p,
+    .text-content h1 {
+        text-align: center;
     }
 }
 
@@ -180,7 +223,8 @@ ul li::before {
         gap: 4vw;
     }
 
-    .text-content p {
+    .text-content p,
+    .text-content h1 {
         text-align: center;
     }
 
@@ -219,13 +263,81 @@ ul li::before {
         list-style: none;
     }
 
-    ul li::before {
-        content: "\2022";
-        color: var(--blue);
-        font-weight: 800;
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
+    .banner-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4vh;
+    }
+
+    /* WINAICO SPECIFIC */
+    #winaicoMainImg {
+        padding: 2vh 0;
+    }
+
+    .winaico-dropdowns {
+        padding-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-title {
+        width: 70%;
+        padding-top: 1rem;
+        justify-content: center;
+        border: none;
+        margin: 0;
+    }
+
+    .winaico-dropdown-content {
+        opacity: 0;
+        height: 0;
+        transition: opacity 3s ease, height 2s ease-in;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .desk-img {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 4vw;
+    }
+
+    /* BYD SPECIFIC */
+    .safety {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 1rem;
+        gap: 6vw;
+        align-items: center;
+    }
+
+    .safety h2 {
+        font-family: 'Amiko', sans-serif;
+        color: var(--greyish);
+        font-size: 2rem;
+    }
+
+    #bydMidImg {
+        padding-bottom: 1rem;
+    }
+
+    .safety ul {
+        color: var(--blackish);
+        list-style: none;
     }
 
     .banner-img {
@@ -292,6 +404,12 @@ ul li::before {
     width: 100%;
 }
 
+.bold-text {
+    font-weight: 500;
+    margin-left: 5vw;
+    padding-top: 5vh;
+}
+
 .grow {
     width: 100%;
     transition: width 5s ease;
@@ -306,4 +424,16 @@ ul li::before {
 
 .rotate {
     transform: rotate(180deg);
+}
+
+.slide-up {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.slide-left {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 1s ease-out, opacity 0.5s ease-out;
 }

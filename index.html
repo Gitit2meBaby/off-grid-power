@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Hind+Guntur:wght@300;400;500;600&family=Open+Sans:wght@500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quote.css">
+    <script type="module" src="quote.js"></script>
     <script defer src="mobile.js"></script>
     <script defer src="script.js"></script>
     <script defer src="testimonial.js"></script>
@@ -19,9 +21,11 @@
 
 <body>
     <header>
-        <div class="logo-container">
-            <img id="logo" src="assets/logo100.webp" alt="off grid power logo">
-        </div>
+        <a href="index.html">
+            <div class="logo-container">
+                <img id="logo" src="assets/logo-white.webp" alt="off grid power logo">
+            </div>
+        </a>
 
         <div class="split-header">
             <div class="contact">
@@ -44,7 +48,9 @@
                     <p>CONTACT US</p>
                 </div>
             </div>
+
             <div class="desktop-nav">
+                <a href="index.html">Home</a>
                 <div class="dropdown">
                     <p id="productsNavItem">Products</p>
                     <svg id="arrowDown" stroke="#3468B2" fill="#3468B2" stroke-width="1" viewBox="0 0 16 16"
@@ -76,12 +82,12 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#">Download</a>
-                <a href="#">Reviews</a>
-                <a href="#">Free Quote</a>
+                <a href="downloads.html">Download</a>
+                <a href="reviews.html">Reviews</a>
             </div>
         </div>
-        </div>
+        <button class="quoteBtn invert-btn">Free Quote</button>
+
     </header>
 
     <section class="hero">
@@ -127,10 +133,10 @@
                     </a>
                 </ul>
             </div>
-            <a href="#">Download</a>
-            <a href="#">Reviews</a>
+            <a href="downloads.html">Download</a>
+            <a href="reviews.html">Reviews</a>
             <a href="#">Blog</a>
-            <button>Free Quote</button>
+            <button class="quoteBtn">Free Quote</button>
         </div>
         <div class="hero-title">
             <h1>Leading provider of off-grid solar systems</h1>
@@ -138,7 +144,7 @@
         <div class="empty"></div>
         <div class="hero-content">
             <h2>We design and install efficient and cost-effective systems for remote locations and cabins.</h2>
-            <button class="quote">Free Quote</button>
+            <button class="quote quoteBtn">Free Quote</button>
         </div>
 
     </section>
@@ -217,15 +223,16 @@
                             features such as monitoring and communication capabilities, enabling users to easily monitor
                             and
                             manage their solar energy systems.</span></p>
-                    <button class="text-btn">LEARN MORE
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
-                            width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z"
-                                clip-rule="evenodd"></path>
-                            <path fill-rule="evenodd" d="M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z"
-                                clip-rule="evenodd"></path>
-                        </svg></button>
+                    <a href="SMA.html">
+                        <button class="text-btn">LEARN MORE
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z"
+                                    clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd" d="M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg></button></a>
                 </div>
             </div>
         </div>
@@ -247,15 +254,16 @@
                         also equipped with a sophisticated battery management system that enhances safety, reliability,
                         and durability. Additionally, the battery system is highly modular, making it flexible for use
                         in different applications and scalable for larger energy storage systems.</p>
-                    <button class="text-btn">LEARN MORE
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
-                            width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z"
-                                clip-rule="evenodd"></path>
-                            <path fill-rule="evenodd" d="M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z"
-                                clip-rule="evenodd"></path>
-                        </svg></button>
+                    <a href="BYD.html">
+                        <button class="text-btn">LEARN MORE
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z"
+                                    clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd" d="M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg></button></a>
                 </div>
             </div>
             <div class="img-container">
@@ -280,15 +288,16 @@
                         and high-quality
                         components. If you are considering solar panels for your home or business, WINAICO is definitely
                         worth considering</p>
-                    <button class="text-btn">LEARN MORE
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
-                            width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z"
-                                clip-rule="evenodd"></path>
-                            <path fill-rule="evenodd" d="M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z"
-                                clip-rule="evenodd"></path>
-                        </svg></button>
+                    <a href="winaico.html">
+                        <button class="text-btn">LEARN MORE
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 8l-2.647-2.646a.5.5 0 010-.708z"
+                                    clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd" d="M2 8a.5.5 0 01.5-.5H13a.5.5 0 010 1H2.5A.5.5 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg></button></a>
                 </div>
             </div>
         </div>
@@ -363,7 +372,7 @@
     </section>
 
     <footer>
-        <div class="footer-cta">
+        <div class="footer-cta quoteBtn">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="5em"
                 width="5em" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -383,9 +392,9 @@
                 <img src="assets/logo150.webp" alt="Off grid power logo">
             </div>
             <div class="footer-nav footer-nav-main">
-                <a href="#">Download</a>
-                <a href="#">Reviews</a>
-                <a href="#">Free Quote</a>
+                <a href="downloads.html">Download</a>
+                <a href="reviews.html">Reviews</a>
+                <a class="quoteBtn" href="#">Free Quote</a>
                 <a href="#">Blog</a>
             </div>
             <div class="footer-nav">
@@ -416,7 +425,7 @@
                         </svg>
                         <p>1800 283 164</p>
                     </div>
-                    <div class="email">
+                    <div class="email quoteBtn">
                         <svg stroke="#82A888" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -433,6 +442,8 @@
             </div>
         </div>
     </footer>
+
+    <dialog class="dialog"></dialog>
 
 </body>
 

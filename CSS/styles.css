@@ -306,7 +306,7 @@ header {
 @media screen and (max-width: 700px) and (min-width: 450px) {
     .hero {
         height: 50vh;
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('assets/hero1000.webp');
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('assets/hero700.webp');
         background-position: center;
         display: grid;
         padding: 9dvh 4vw 0 12vw;

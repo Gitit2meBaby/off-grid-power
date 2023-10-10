@@ -191,8 +191,16 @@ module.bundle.Module = Module;
 var checkedAssets, assetsToAccept;
 var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
-  var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+  var hostname = location.hostname;
+  
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    // If running locally, connect to your local server.
+    var ws = new WebSocket(protocol + '://localhost:1234');
+  } else {
+    // Otherwise, connect to the appropriate WebSocket URL.
+    var ws = new WebSocket(protocol + '://' + hostname + ':' + "55614" + '/');
+  }
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "55614" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};

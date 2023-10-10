@@ -155,12 +155,4 @@ document.addEventListener('DOMContentLoaded', () => {
         addInfoContent.classList.toggle('show-dropdown')
         addTitleText.classList.add('active-text')
     })
-
-    // document.addEventListener('click', (e) => {
-
-    //     if (!quoteContainer && isModalOpen === false) {
-    //         dialog.close();
-    //         isModalOpen = false;
-    //     }
-    // });
 });

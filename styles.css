@@ -159,7 +159,7 @@ header {
 
 .dropdown-content a {
     font-size: 1rem;
-    color: black;
+    color: var(--blue);
     padding: .3rem;
     text-decoration: none;
     display: block;
@@ -176,6 +176,12 @@ header {
     border: 2px solid var(--whiteText);
 }
 
+.invert-btn:hover {
+    background-color: var(--whiteText);
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
+
 @media screen and (min-width: 450px) {
     .toggle {
         display: none;
@@ -187,6 +193,28 @@ header {
 
     .mobile-nav {
         display: none;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 700px) {
+
+    header button,
+    .split-header {
+        display: none;
+    }
+
+    .toggle {
+        display: block;
+        position: absolute;
+        top: .5rem;
+        right: 1rem;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    header {
+        height: 9vh;
+        overflow: hidden;
     }
 }
 
@@ -215,10 +243,10 @@ header {
 .hero-title h1 {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    font-size: 5rem;
+    font-size: 5.5vw;
     color: var(--whiteText);
-    line-height: 5rem;
-    padding-right: 5vw;
+    line-height: 5.5vw;
+    padding-right: 6vw;
 }
 
 .hero-content {
@@ -227,7 +255,7 @@ header {
 
 .hero-content h2 {
     font-family: 'Amiko', sans-serif;
-    font-size: 2rem;
+    font-size: 2.2vw;
     color: var(--whiteText);
     margin: 0;
     padding-left: 38vw;
@@ -246,49 +274,66 @@ header {
     border-radius: .2rem;
 }
 
-@media screen and (max-width: 450px) {
-    .toggle {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        z-index: 10;
-        cursor: pointer;
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+    .invert-btn {
+        padding: .5rem 1rem .2rem 1rem;
+        line-height: 1.2rem;
     }
 
     .hero {
-        height: auto;
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('assets/hero450.webp');
-        background-size: cover;
+        height: 50vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('assets/hero1000.webp');
         background-position: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 1rem 3rem 1rem;
-        z-index: 1;
+        display: grid;
+        padding: 9dvh 4vw 0 12vw;
     }
 
     .hero-title h1 {
-        font-size: 3rem;
-        color: var(--whiteText);
-        line-height: 3.3rem;
-        padding-right: 0vw;
-        text-align: center;
-        padding: 5rem 1rem 4rem 1rem;
-    }
-
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        font-size: 5.5vw;
+        line-height: 5.5vw;
+        padding-right: 4vw;
     }
 
     .hero-content h2 {
-        font-family: 'Amiko', sans-serif;
-        font-size: 1.5rem;
-        margin: 0;
-        letter-spacing: 0rem;
-        padding: 1rem 1rem 2rem 1rem;
-        text-align: center;
+        font-size: 2.2vw;
+        padding-left: 38vw;
+        margin-top: -12vh;
+        letter-spacing: .1rem;
+    }
+
+}
+
+@media screen and (max-width: 700px) and (min-width: 450px) {
+    .hero {
+        height: 50vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('assets/hero1000.webp');
+        background-position: center;
+        display: grid;
+        padding: 9dvh 4vw 0 12vw;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(2.2rem, 6.5vw, 6.5vw);
+        line-height: 6vw;
+        padding-right: 1vw;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(1rem, 2.8vw, 2.8vw);
+        padding-left: 34vw;
+        margin-top: -12vh;
+        letter-spacing: .1rem;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .toggle {
+        position: absolute;
+        top: .8rem;
+        right: 1.5rem;
+        z-index: 10;
+        cursor: pointer;
     }
 
     .mobile-nav {
@@ -368,6 +413,52 @@ header {
 
 }
 
+@media screen and (max-width: 450px) {
+    .toggle {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .hero {
+        height: auto;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('assets/hero450.webp');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 1rem 3rem 1rem;
+        z-index: 1;
+    }
+
+    .hero-title h1 {
+        font-size: 3rem;
+        color: var(--whiteText);
+        line-height: 3.3rem;
+        padding-right: 0vw;
+        text-align: center;
+        padding: 5rem 1rem 4rem 1rem;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h2 {
+        font-family: 'Amiko', sans-serif;
+        font-size: 1.5rem;
+        margin: 0;
+        letter-spacing: 0rem;
+        padding: 1rem 1rem 2rem 1rem;
+        text-align: center;
+    }
+}
+
 /* info section */
 .info {
     display: flex;
@@ -385,6 +476,32 @@ header {
     color: var(--blue);
     font-size: 2rem;
     margin: 0;
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1000px) {
+    .info-img img {
+        max-width: 45vw;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 450px) {
+    .desktop-info-img {
+        display: none;
+    }
+
+    .mob-info-img {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .info {}
+
+    .info-content {
+        display: flex;
+        flex-direction: column;
+        padding: 2vh 6vw;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -418,7 +535,7 @@ header {
     }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 1000px) {
     .mob-info-img {
         display: none;
     }
@@ -429,6 +546,7 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
         url('assets/panels1920.webp');
     background-size: cover;
+    background-position: center;
     display: grid;
     grid-template-columns: 27% 1fr 27%;
     height: 60dvh;
@@ -470,6 +588,70 @@ header {
     margin: 0;
     font-size: 1.5rem;
     color: var(--whiteText);
+}
+
+@media screen and (max-width: 1100px) and (min-width: 950px) {
+    .cta {
+        padding: 0 1rem;
+    }
+
+    .cta-text h2 {
+        font-size: 4.5rem;
+        line-height: 4rem;
+    }
+
+    .counter h4 {
+        font-size: 4.5rem;
+        line-height: 2.5rem;
+    }
+
+    .counter p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 950px) and (min-width: 750px) {
+    .cta-text h2 {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    .counter h4 {
+        font-size: 3.5rem;
+        line-height: 2.5rem;
+    }
+
+    .counter p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px) and (min-width: 450px) {
+    .cta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 4rem;
+    }
+
+    .cta-text h2 {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    .counter h4 {
+        font-size: 4.5rem;
+        line-height: 2.5rem;
+    }
+
+    .counter p {
+        font-size: 1.3rem;
+    }
+
+    .cta-text {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -581,6 +763,47 @@ header {
     max-width: 90vw;
 }
 
+a {
+    text-decoration: none;
+}
+
+.text-btn {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    min-width: 170px
+}
+
+.text-btn svg {
+    margin-top: -.4rem;
+    margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 450px) {
+    .products-title {
+        padding-bottom: 1rem;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .product-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mob-cut,
+    #bydDesk,
+    #winaicoDesk,
+    #smaDesk {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .products {
         display: flex;
@@ -599,25 +822,14 @@ header {
     }
 
     .products-title h3 {
-        font-family: 'Amiko', sans-serif;
         font-size: 1.5rem;
-        color: var(--greyish);
-        margin: 0;
     }
 
     .products-title h2 {
-        font-family: 'Open Sans', sans-serif;
         font-size: 2.5rem;
-        margin: 0;
         padding-bottom: 0.5rem;
-        color: var(--blackish);
         padding: .5rem 0 1.5rem 0;
         text-align: center;
-    }
-
-    .divider {
-        height: 2px;
-        background-color: lightgray;
     }
 
     .big {
@@ -669,7 +881,7 @@ header {
     }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 1100px) {
 
     #bydMob,
     #winaicoMob,
@@ -765,6 +977,12 @@ header {
     font-weight: 500;
 }
 
+@media screen and (max-width: 700px) and (min-width: 450px) {
+    .testimonial {
+        height: 45vh;
+    }
+}
+
 @media screen and (max-width: 450px) {
 
     .testimonials,
@@ -799,6 +1017,7 @@ header {
     justify-content: center;
     padding: 0 4vw 4vh 4vw;
     gap: 4vw;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 450px) {
@@ -813,11 +1032,10 @@ header {
         max-width: 150px;
     }
 
-    #award {
+    #smaPowerUp {
         display: none;
     }
 }
-
 
 /* FOOTER */
 .footer-cta {
@@ -827,6 +1045,11 @@ header {
     justify-content: center;
     background-color: var(--blue);
     color: var(--whiteText);
+    overflow: hidden;
+}
+
+.footer-cta svg {
+    opacity: .7;
 }
 
 .footer-cta h2 {
@@ -836,7 +1059,7 @@ header {
 }
 
 .footer-cta h2:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 1s ease-in-out;
 }
 
@@ -1020,6 +1243,44 @@ header {
         color: var(--blackish);
     }
 }
+
+@media screen and (min-width: 450px) and (max-width: 800px) {
+    .footer-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer-logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-cta h2 {
+        text-align: center;
+        padding: 1rem;
+        line-height: 2.5rem;
+    }
+
+    .footer-cta h2:hover {
+        transform: none;
+    }
+
+    .footer-cta svg:nth-child(3) {
+        opacity: .5;
+        position: absolute;
+        right: 5vw;
+        bottom: 1vh;
+        transform: rotate(15deg);
+        animation: none;
+    }
+
+    .footer-cta svg:nth-child(1) {
+        display: none;
+        animation: none;
+    }
+}
+
 
 /* JAVASCRIPT CLASSES */
 .hidden {

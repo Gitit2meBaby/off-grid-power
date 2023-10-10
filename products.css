@@ -410,6 +410,11 @@ ul li::before {
     padding-top: 5vh;
 }
 
+.color-text {
+    font-weight: 700 !important;
+    color: var(--blue) !important;
+}
+
 .grow {
     width: 100%;
     transition: width 5s ease;
@@ -419,7 +424,7 @@ ul li::before {
     transform: translateY(0);
     transition: all 0.25s ease-in;
     opacity: 1;
-    display: block;
+    height: auto;
 }
 
 .rotate {

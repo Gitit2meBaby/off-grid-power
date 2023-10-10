@@ -1,3 +1,7 @@
+<?php
+include('formHandle.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -358,7 +362,7 @@
     </section>
 
     <section class="banner">
-        <img src="assets/award.webp" alt="Clean energy council award">
+        <img id="award" src="assets/award.webp" alt="Clean energy council award">
         <a href="https://www.winaico.com.au/">
             <img src="assets/winaico-logo.webp" alt="winaicologo">
         </a>
@@ -368,7 +372,7 @@
         <a href="https://bydbatterybox.com/">
             <img src="assets/BYD-logo.webp" alt="BYD logo">
         </a>
-        <img id="smaPowerUp" src="assets/SMA-powerup-logo.webp" alt="SMA Power Up logo">
+        <img src="assets/SMA-powerup-logo.webp" alt="SMA Power Up logo">
     </section>
 
     <footer>

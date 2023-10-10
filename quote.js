@@ -7,19 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
         <h1>Please enter your contact details</h1>
         <img src="assets/logo100.webp" alt="Off Grid Power logo">
     </div>
-    <form action="/submit-form">
+    <form action="formHandle.php" method="POST">
         <div class="details">
             <label for="name">Name</label>
-            <input autocomplete="on" type="text" id="name" required aria-label="Name">
+            <input autocomplete="on" type="text" id="name" name="name" required aria-label="Name">
 
             <label for="email">Email</label>
-            <input autocomplete="on" type="email" id="email" required aria-label="Email">
+            <input autocomplete="on" type="email" id="email" name="email" required aria-label="Email">
 
             <label for="phone">Phone</label>
-            <input autocomplete="on" type="tel" id="phone" required aria-label="Phone">
+            <input autocomplete="on" type="tel" id="phone" name="phone" required aria-label="Phone">
 
             <label for="address">Address</label>
-            <input autocomplete="on" type="text" id="address" required aria-label="Address">
+            <input autocomplete="on" type="text" id="address" name="address" required aria-label="Address">
         </div>
 
         <div class="add-title">

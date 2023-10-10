@@ -1,11 +1,13 @@
 const dropdownTitles = document.querySelectorAll('.dropdown-title');
 const dropdownArrows = document.querySelectorAll('.winaicoArrows');
 const winaicoDropdowns = document.querySelectorAll('.winaico-dropdown-content');
+const winaicoTitleText = document.querySelectorAll('.winaicoTitleText')
 
 dropdownTitles.forEach((dropdownTitle) => {
     dropdownTitle.addEventListener('click', (e) => {
         const currentDropdown = e.currentTarget.nextElementSibling;
         const currentArrow = e.currentTarget.querySelector('.winaicoArrows');
+        const currentTitle = e.currentTarget.querySelector('.winaicoTitleText')
 
         dropdownTitles.forEach((title) => {
             title.classList.remove('grow')
@@ -18,9 +20,14 @@ dropdownTitles.forEach((dropdownTitle) => {
             dropdown.classList.remove('active')
         })
 
+        winaicoTitleText.forEach((title) => {
+            title.classList.remove('color-text')
+        })
+
         if (currentDropdown && currentArrow) {
             currentDropdown.classList.toggle('active');
             currentArrow.classList.toggle('rotate');
+            currentTitle.classList.toggle('color-text')
             dropdownTitle.classList.toggle('grow')
         }
     });

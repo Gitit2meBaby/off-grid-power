@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Font1';
+    src: url('Amiko/Amiko-Bold.ttf') format('truetype'),
+    url('Amiko/Amiko-SemiBold.ttf') format('truetype'),
+         url('Amiko/Amiko-Regular.ttf') format('truetype'),
+         url('Hind_Guntur/HindGuntur-Bold.ttf') format('truetype'),
+         url('AHind_Guntur/HindGuntur-Regular.ttf') format('truetype'),
+         url('Hind_Guntur/HindGuntur-SemiBold.ttf') format('truetype'),
+         url('Open_Sans/static/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 400, 500, 700;
+    font-style: normal;
+  }
+
 :root {
     --whiteText: rgb(247, 247, 247);
     /* heading */

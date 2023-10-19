@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <h1>Please enter your contact details</h1>
         <img src="assets/logo100.webp" alt="Off Grid Power logo">
     </div>
-    <form action="formHandle.php" method="POST">
-        <div class="details">
+    <form action="https://formsubmit.co/thisworldofdans@gmail.com" method="POST" />
+
+    <div class="details">
             <label for="name">Name</label>
             <input autocomplete="on" type="text" id="name" name="name" required aria-label="Name">
 

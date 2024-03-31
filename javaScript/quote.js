@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <h1>Please enter your contact details</h1>
         <img src="assets/logo100.webp" alt="Off Grid Power logo">
     </div>
-    <form action="https://formsubmit.co/el/vizaca" method="POST" />
+    <form action="https://formsubmit.co/el/vizaca"`` method="POST">
 
     <input type="text" name="_honey" style="display:none">
-
+    <input type="hidden" name="_next" value="https://app.netlify.com/sites/earnest-lollipop-05bf54/overview">
+    
     <div class="details">
             <label for="name">Name</label>
             <input autocomplete="on" type="text" id="name" name="name" required aria-label="Name">
@@ -37,92 +38,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div id="formDropdown">
             <div class="radios">
-                <div class="power-requirement">
-                    <p>Power Requirement</p>
-                    <label>
-                        <input type="radio" id="oneTwo" name="power" checked>
-                        1-2 People
-                    </label>
-                    <label>
-                        <input type="radio" id="twoFour" name="power">
-                        2-4 People
-                    </label>
-                    <label>
-                        <input type="radio" id="fourSix" name="power">
-                        4-6 People
-                    </label>
-                    <label>
-                        <input type="radio" id="commercial" name="power">
-                        Commercial Business
-                    </label>
-                </div>
+            <div class="power-requirement">
+            <p id="powerRequirementLabel">Power Requirement</p>
+            <label>
+                <input type="radio" id="oneTwo" name="power" value="1-2 People" checked aria-labelledby="powerRequirementLabel">
+                1-2 People
+            </label>
+            <label>
+                <input type="radio" id="twoFour" name="power" value="2-4 People" aria-labelledby="powerRequirementLabel">
+                2-4 People
+            </label>
+            <label>
+                <input type="radio" id="fourSix" name="power" value="4-6 People" aria-labelledby="powerRequirementLabel">
+                4-6 People
+            </label>
+            <label>
+                <input type="radio" id="commercial" name="power" value="Commercial Business" aria-labelledby="powerRequirementLabel">
+                Commercial Business
+            </label>
+        </div>        
 
-                <div class="system-size">
-                    <p>Size of system required</p>
-                    <label>
-                        <input type="radio" id="ten" name="size">
-                        3.3kW (10 Panels)
-                    </label>
-                    <label>
-                        <input type="radio" id="twenty" name="size">
-                        6.6kW (20 Panels)
-                    </label>
-                    <label>
-                        <input type="radio" id="twentyFour" name="size">
-                        8kW (24 Panels)
-                    </label>
-                    <label>
-                        <input type="radio" id="fourty" name="size">
-                        13.2kW (40 Panels)
-                    </label>
-                    <label>
-                        <input type="radio" id="fourtyFour" name="size">
-                        16kW (44 Panels)
-                    </label>
-                    <label>
-                        <input type="radio" id="greater" name="size">
-                        Greater than 16kw
-                    </label>
-                    <label>
-                        <input type="radio" id="notSure" name="size" checked>
-                        I don't know please advise
-                    </label>
-                </div>
-            </div>
+        <div class="system-size">
+        <p id="systemSizeLabel">Size of system required</p>
+        <label>
+            <input type="radio" id="ten" name="size" value="3.3kW (10 Panels)" aria-labelledby="systemSizeLabel">
+            3.3kW (10 Panels)
+        </label>
+        <label>
+            <input type="radio" id="twenty" name="size" value="6.6kW (20 Panels)" aria-labelledby="systemSizeLabel">
+            6.6kW (20 Panels)
+        </label>
+        <label>
+            <input type="radio" id="twentyFour" name="size" value="8kW (24 Panels)" aria-labelledby="systemSizeLabel">
+            8kW (24 Panels)
+        </label>
+        <label>
+            <input type="radio" id="fourty" name="size" value="13.2kW (40 Panels)" aria-labelledby="systemSizeLabel">
+            13.2kW (40 Panels)
+        </label>
+        <label>
+            <input type="radio" id="fourtyFour" name="size" value="16kW (44 Panels)" aria-labelledby="systemSizeLabel">
+            16kW (44 Panels)
+        </label>
+        <label>
+            <input type="radio" id="greater" name="size" value="Greater than 16kW" aria-labelledby="systemSizeLabel">
+            Greater than 16kW
+        </label>
+        <label>
+            <input type="radio" id="notSure" name="size" value="I don't know please advise" checked aria-labelledby="systemSizeLabel">
+            I don't know please advise
+        </label>
+    </div>    
 
-            <div class="usage">
-                <label for="usage">Average Daily Electricity Usage kW</label>
-                <input type="text" id="usage">
-
-                <label for="hours">What percentage from the above field is used during daylight hours?</label>
-                <input type="text" id="hours">
-            </div>
+    <div class="usage">
+    <label for="usage">Average Daily Electricity Usage (kW)</label>
+    <input type="number" id="usage" name="usage" required aria-labelledby="usageLabel">
+    <!-- Use type="number" for numeric input -->
+    
+    <label for="hours">Percentage of Usage During Daylight Hours (%)</label>
+    <input type="number" id="hours" name="hours" required aria-labelledby="hoursLabel">
+</div>
 
             <div class="type">
-                <p>Building Type</p>
-                <label>
-                    <input type="checkbox" id="tin" name="type">
-                    Tin Roof
-                </label>
-                <label>
-                    <input type="checkbox" id="tile" name="type">
-                    Tile Roof
-                </label>
-                <label>
-                    <input type="checkbox" id="single" name="type">
-                    Single Story
-                </label>
-                <label>
-                    <input type="checkbox" id="double" name="type">
-                    Double Story
-                </label>
-                <label>
-                    <input type="checkbox" id="shed" name="type">
-                    Shed
-                </label>
-            </div>
-
-
+            <p>Building Type</p>
+            <label>
+                <input type="checkbox" id="tin" name="type" value="Tin Roof">
+                Tin Roof
+            </label>
+            <label>
+                <input type="checkbox" id="tile" name="type" value="Tile Roof">
+                Tile Roof
+            </label>
+            <label>
+                <input type="checkbox" id="single" name="type" value="Single Story">
+                Single Story
+            </label>
+            <label>
+                <input type="checkbox" id="double" name="type" value="Double Story">
+                Double Story
+            </label>
+            <label>
+                <input type="checkbox" id="shed" name="type" value="Shed">
+                Shed
+            </label>
+        </div>
+        
             <div class="comments">
                 <label for="comments">Please provide any additional comments / information here</label>
                 <div class="textarea-wrapper">
@@ -159,66 +159,17 @@ document.addEventListener('DOMContentLoaded', () => {
         addTitleText.classList.add('active-text')
     })
 
-    const name = document.querySelector('#name')
-    const phone = document.querySelector('#phone')
-    const email = document.querySelector('#email')
-    const address = document.querySelector('#address')
-    const power = document.querySelector('input[name="power"]:checked').nextSibling.nodeValue.trim();
-    const size = document.querySelector('input[name="size"]:checked').nextSibling.nodeValue.trim();
-    const usage = document.getElementById('usage').value.trim();
-    const hours = document.getElementById('hours').value.trim();
-    const comments = document.getElementById('comments').value.trim();
+    const submitBtn = document.querySelector('#submitForm')
+    submitBtn.addEventListener('click', () => {
+        dialog.removeChild(quoteContainer)
 
-    // Construct email body
-    const emailBody = `
-    Name: ${name}
-    Email: ${email}
-    Phone: ${phone}
-    Address: ${address}
-        Power Requirement: ${power}
-        Size of system required: ${size}
-        Average Daily Electricity Usage: ${usage} kW
-        Percentage used during daylight hours: ${hours}%
-        Building Type: ${getSelectedCheckboxes('type').join(', ')}
-        Additional Comments: ${comments}
-    `;
-
-    const sendEmail = async () => {
-        const apiKey = 'YOUR_SENDGRID_API_KEY';
-        const url = 'https://api.sendgrid.com/v3/mail/send';
-
-        const data = {
-            personalizations: [
-                {
-                    to: [{ email: 'thisworldofdans@gmail.com' }],
-                    subject: 'Contact Form Submission',
-                },
-            ],
-            from: { email: email },
-            content: [{ type: 'text/plain', value: emailBody }],
-        };
-
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${apiKey}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-
-            if (response.ok) {
-                console.log('Email sent successfully');
-            } else {
-                console.error('Failed to send email');
-            }
-        } catch (error) {
-            console.error('Error sending email:', error);
-        }
-    };
-
-    // recovery - E48JYSDW4PF6Z9CU6T8KQFK3
-
+        const submitting = document.createElement('div')
+        submitting.innerHTML = `
+        <div class="submitting">
+        <h2>Thank you for your submission!</h2>
+        <p>Please Wait just a moment</p>
+        </div>
+        `
+    })
 
 });

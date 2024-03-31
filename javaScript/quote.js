@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <h1>Please enter your contact details</h1>
         <img src="assets/logo100.webp" alt="Off Grid Power logo">
     </div>
-    <form action="https://formsubmit.co/thisworldofdans@gmail.com" method="POST" />
+    <form action="https://formsubmit.co/el/vizaca" method="POST" />
+
+    <input type="text" name="_honey" style="display:none">
 
     <div class="details">
             <label for="name">Name</label>
@@ -156,4 +158,67 @@ document.addEventListener('DOMContentLoaded', () => {
         addInfoContent.classList.toggle('show-dropdown')
         addTitleText.classList.add('active-text')
     })
+
+    const name = document.querySelector('#name')
+    const phone = document.querySelector('#phone')
+    const email = document.querySelector('#email')
+    const address = document.querySelector('#address')
+    const power = document.querySelector('input[name="power"]:checked').nextSibling.nodeValue.trim();
+    const size = document.querySelector('input[name="size"]:checked').nextSibling.nodeValue.trim();
+    const usage = document.getElementById('usage').value.trim();
+    const hours = document.getElementById('hours').value.trim();
+    const comments = document.getElementById('comments').value.trim();
+
+    // Construct email body
+    const emailBody = `
+    Name: ${name}
+    Email: ${email}
+    Phone: ${phone}
+    Address: ${address}
+        Power Requirement: ${power}
+        Size of system required: ${size}
+        Average Daily Electricity Usage: ${usage} kW
+        Percentage used during daylight hours: ${hours}%
+        Building Type: ${getSelectedCheckboxes('type').join(', ')}
+        Additional Comments: ${comments}
+    `;
+
+    const sendEmail = async () => {
+        const apiKey = 'YOUR_SENDGRID_API_KEY';
+        const url = 'https://api.sendgrid.com/v3/mail/send';
+
+        const data = {
+            personalizations: [
+                {
+                    to: [{ email: 'thisworldofdans@gmail.com' }],
+                    subject: 'Contact Form Submission',
+                },
+            ],
+            from: { email: email },
+            content: [{ type: 'text/plain', value: emailBody }],
+        };
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    Authorization: `Bearer ${apiKey}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                console.log('Email sent successfully');
+            } else {
+                console.error('Failed to send email');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    };
+
+    // recovery - E48JYSDW4PF6Z9CU6T8KQFK3
+
+
 });

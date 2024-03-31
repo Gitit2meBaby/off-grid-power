@@ -1,3 +1,4 @@
 {
-    "php.validate.executablePath": "/opt/homebrew/bin/php"
+    "php.validate.executablePath": "/opt/homebrew/bin/php",
+    "liveServer.settings.port": 5501
 }

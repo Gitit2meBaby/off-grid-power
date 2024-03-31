@@ -4,19 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     quoteContainer.innerHTML = `
 <div class="main-title">
+<button id="backBtn">Back</button>
         <h1>Please enter your contact details</h1>
         <img src="assets/logo100.webp" alt="Off Grid Power logo">
     </div>
-    <form action="https://formsubmit.co/el/vizaca"`` method="POST">
+    <form id="form" action="https://formsubmit.co/el/vizaca"`` method="POST">
 
     <input type="text" name="_honey" style="display:none">
     <input type="hidden" name="_next" value="https://app.netlify.com/sites/earnest-lollipop-05bf54/overview">
     
     <div class="details">
-            <label for="name">Name</label>
+            <label for="name">Name<span class='required'>*</span></label>
             <input autocomplete="on" type="text" id="name" name="name" required aria-label="Name">
 
-            <label for="email">Email</label>
+            <label for="email">Email<span class='required'>*</span></label>
             <input autocomplete="on" type="email" id="email" name="email" required aria-label="Email">
 
             <label for="phone">Phone</label>
@@ -141,8 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const dialog = document.querySelector('.dialog')
     dialog.appendChild(quoteContainer)
 
-    const quoteBtns = document.querySelectorAll('.quoteBtn');
     let isModalOpen = false
+    const quoteBtns = document.querySelectorAll('.quoteBtn');
+    const closeBtn = document.querySelector('#closeBtn')
 
     quoteBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -150,6 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
             isModalOpen = true
         });
     });
+
+
+    closeBtn.addEventListener('click', () => {
+        dialog.closeModal()
+        isModalOpen = false
+    })
+
     const addTitleText = document.querySelector('#additionalInformation')
     const addInfoTitle = document.querySelector('.add-title')
     const addInfoContent = document.querySelector('#formDropdown')
@@ -158,6 +167,33 @@ document.addEventListener('DOMContentLoaded', () => {
         addInfoContent.classList.toggle('show-dropdown')
         addTitleText.classList.add('active-text')
     })
+
+
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        // Validate form fields
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        if (name === '' || email === '') {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        form.submit();
+        dialog.removeChild(quoteContainer)
+
+        const submitting = document.createElement('div')
+        submitting.innerHTML = `
+        <div class="submitting">
+        <h2>Thank you for your submission!</h2>
+        <p>Please Wait just a moment</p>
+        </div>
+        `
+        dialog.appendChild(submitting)
+    });
 
     const submitBtn = document.querySelector('#submitForm')
     submitBtn.addEventListener('click', () => {
@@ -170,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>Please Wait just a moment</p>
         </div>
         `
+        dialog.appendChild(submitting)
     })
 
 });
